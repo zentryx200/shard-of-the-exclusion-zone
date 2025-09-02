@@ -31,9 +31,9 @@
     opacity: 0;
     transition: opacity 1s ease-in-out;
     z-index: 1;
-    user-select: none; /* запрет выделения текста и картинок */
-    -webkit-user-drag: none; /* запрет перетаскивания изображения в браузере */
-    pointer-events: none; /* чтобы мышь “проходила” */
+    user-select: none; 
+    -webkit-user-drag: none;
+    pointer-events: none; 
 }
 
 .active {

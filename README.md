@@ -1,7 +1,6 @@
 # Shard of the Exclusion Zone
 
-![Zone Banner](image/banner/banner.jpg)
-
+![Zone Banner](assets/banner/banner.jpg)
 
 A fan-made project inspired by the **S.T.A.L.K.E.R.** universe.
 
