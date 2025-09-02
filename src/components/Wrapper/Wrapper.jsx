@@ -54,17 +54,20 @@ const Wrapper = () => {
       <audio ref={audioRef} loop src="/audio/MoozE - Stalker ambient.mp3" />
 
       <div className={styles.controlsWrapper}>
-        <div className={styles.dots}>
+        <ul className={styles.pagination}>
           {images.map((_, i) => (
-            <span
-              key={i}
-              className={`${styles.dot} ${
-                i == current ? `${styles.active}` : ""
-              }`}
-              onClick={() => setCurrent(i)}
-            />
+            <li key={i} className={styles.pagination__item}>
+              <button
+                className={`${styles.pagination__link} ${
+                  i === current ? styles.is_active : ""
+                }`}
+                onClick={() => setCurrent(i)}
+              >
+                Slide {i + 1}
+              </button>
+            </li>
           ))}
-        </div>
+        </ul>
 
         <div className={styles.controls}>
           <button
