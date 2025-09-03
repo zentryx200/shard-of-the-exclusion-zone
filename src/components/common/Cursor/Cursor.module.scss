@@ -37,3 +37,16 @@
     transform: translate(-50%, -50%);
     z-index: 9999;
 }
+
+.link {
+     position: fixed;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    background: url('/image/icon/cursor/buttonCursorStalker.png') no-repeat center center;
+    background-size: contain;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+}

@@ -17,7 +17,9 @@ const Cursor = () => {
     const handleMouseOver = (e) => {
       if (e.target.tagName === "INPUT") setType("text");
       else if (e.target.tagName === "BUTTON") setType("button");
-      else setType("default");
+      else if (e.target.tagName === "A" || e.target.closest("a")) {
+        setType("link");
+      } else setType("default");
     };
 
     window.addEventListener("mousemove", handleMouseMove);
