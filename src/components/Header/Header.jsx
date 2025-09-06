@@ -1,5 +1,6 @@
 import React from "react";
 import Logo from "./Logo/Logo";
+import Nav from "./Nav/Nav";
 import styles from "./Header.module.scss";
 
 const Header = () => {
@@ -7,7 +8,7 @@ const Header = () => {
     <header className={styles.Header}>
       <div className={styles.Header__Container}>
         <Logo /> {/* ← логотип слева */}
-        <nav>{/* навигация будет справа */}</nav>
+        <Nav />
       </div>
     </header>
   );
