@@ -4,7 +4,7 @@ const Logo = () => {
   return (
     <a href="/" aria-label="Home">
       <img
-        src="assets/logo/Logo.png"
+        src="src/assets/logo/Logo.png"
         alt="SZE Logo"
         width="160"
         height="70"

@@ -29,7 +29,6 @@ const Hero = () => {
 
   return (
     <div className={styles.Hero}>
-      <Header />
       <Slideshow images={images} current={current} />
       <AudioPlayer audioRef={audioRef} paused={paused} />
       <div className={styles.controlsWrapper}>
