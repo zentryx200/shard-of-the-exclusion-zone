@@ -16,7 +16,7 @@
     animation: shrink 0.6s ease forwards;
 
     .BurgerMenu__dots {
-      transition: transform 0.5s ease-in-out;
+      transition: transform 0.3s ease-in-out;
       transform: rotate(180deg);
     }
   }
@@ -32,10 +32,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 7px;
   user-select: none;
   -webkit-user-drag: none;
   transition: transform 0.5s ease;
+  pointer-events: none;
 }
 
 .BurgerMenu__dot {
