@@ -1,0 +1,21 @@
+@import url("./BurgerMenu.module.css");
+@import url("./BurgerMenuContent.module.css");
+
+@media (max-width: 1200px) {
+  .burgerContent {
+    width: 60vw;
+    height: 90vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .burgerContent {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .BurgerItem {
+    font-size: 1rem;
+    letter-spacing: 2px;
+  }
+}

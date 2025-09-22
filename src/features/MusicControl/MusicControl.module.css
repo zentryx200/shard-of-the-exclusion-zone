@@ -1,0 +1,91 @@
+.mute__btn {
+  border: none;
+  background-color: var(--primary-color);
+  width: clamp(40px, 4vw, 64px);
+  height: clamp(40px, 4vw, 64px);
+  border-radius: 100%;
+  cursor: pointer;
+  overflow: visible;
+  position: relative;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.mute__btn:hover {
+  transform: scale(1.05);
+}
+
+.clicked {
+  transform: scale(0.85);
+}
+
+.mute__btn::after {
+  content: "";
+  position: absolute;
+  inset: -5%;
+  border-radius: 100%;
+  background-color: #212121;
+  transform: scale(0);
+  transform-origin: center center;
+  transition: transform 0.4s ease;
+  transition-delay: 0.15s;
+  z-index: 0;
+}
+
+.mute__btn.muted::after {
+  transform: scale(1);
+}
+
+.mute__icon {
+  position: relative;
+  z-index: 1;
+}
+
+.mute__icon {
+  width: clamp(20px, 2vw, 32px);
+  height: clamp(20px, 2vw, 32px);
+  stroke: black;
+  stroke-width: 0.1;
+  fill: none;
+}
+
+.mute__icon rect {
+  fill: black;
+  animation: bounce 1s infinite ease-in-out both;
+  transition: fill 0.3s ease;
+}
+
+.mute__icon rect:nth-child(1) {
+  animation-delay: 0s;
+}
+.mute__icon rect:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.mute__icon rect:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.mute__icon rect:nth-child(9) {
+  animation-delay: 0.3s;
+}
+.mute__icon rect:nth-child(5) {
+  animation-delay: 0.8s;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    height: 30%;
+    y: 70%;
+  }
+  50% {
+    height: 100%;
+    y: 40%;
+  }
+}
+
+.muted .mute__icon rect {
+  fill: var(--primary-color);
+  transform: translateY(7px) scaleY(0.3);
+  animation: none;
+  transform: scaleY(0.1);
+  transform-origin: bottom;
+}

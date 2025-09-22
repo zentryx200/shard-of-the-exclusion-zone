@@ -1,0 +1,48 @@
+@import url("../../shared/styles/base/variables.css");
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: clamp(16px, 5vw, 50px);
+  overflow: visible;
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  margin: 0 auto;
+}
+
+.header__nav {
+  display: flex;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav__List {
+  display: flex;
+  align-items: center;
+  gap: clamp(16px, 5vw, 45px);
+}
+
+.nav__Link {
+  color: white;
+  font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+  font-weight: 600;
+  letter-spacing: clamp(0.05rem, 0.3vw, 0.2rem);
+  font-family: var(--font-main);
+  transition: border 0.3s ease;
+  padding: 5px;
+}

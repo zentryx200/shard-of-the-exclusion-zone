@@ -1,0 +1,42 @@
+.slideshowContainer {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: black;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(
+      circle,
+      rgb(250, 250, 250, 0),
+      rgba(0, 0, 0, 1) 100%
+    );
+    pointer-events: none;
+    z-index: 5;
+  }
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  object-fit: cover;
+  transition: opacity 1s ease;
+  z-index: 1;
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+.active {
+  opacity: 1;
+}

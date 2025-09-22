@@ -1,0 +1,11 @@
+/*
+                                                     
+                  🌐 GLOBAL STYLES                   
+        Base styles, typography, colors, and resets go    
+            here for the entire website                        
+                                                      
+*/
+@import "./base/globals.css";
+
+@import "./base/typography.css";
+@import "./base/variables.css";

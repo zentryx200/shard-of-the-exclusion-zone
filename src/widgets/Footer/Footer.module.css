@@ -1,0 +1,39 @@
+@import url("../../shared/styles/base/variables.css");
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: clamp(20px, 5vw, 50px);
+}
+
+.footer__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer__left {
+  display: flex;
+  align-items: center;
+  gap: clamp(20px, 5vw, 45px);
+}
+
+.discord__link {
+  position: relative;
+  color: var(--primary-color);
+  font-family: var(--font-main);
+  background: transparent;
+  border: 3px solid var(--primary-color);
+  padding: clamp(0.5rem, 1.5vw, 1rem) clamp(1rem, 3vw, 1.5rem);
+  letter-spacing: clamp(0.1rem, 0.5vw, 0.2rem);
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  border-radius: 50px;
+  overflow: hidden;
+  cursor: pointer;
+}

@@ -1,0 +1,67 @@
+@import url("./BurgerMenuContent.module.css");
+@import url("./BurgerContent.media.css");
+@import url("../../../../../shared/styles/main.css");
+
+.burger__Menu {
+  position: relative;
+  top: 50%;
+  left: 0;
+  transform: translateX(-15%);
+  border: none;
+  width: clamp(40px, 8vw, 64px);
+  height: clamp(40px, 8vw, 64px);
+  border-radius: 100%;
+  background-color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: clamp(20px, 5vw, 45px);
+  z-index: 10;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.burger__Menu::after {
+  content: "";
+  position: absolute;
+  inset: -5%;
+  border-radius: 100%;
+  background-color: #212121;
+  transform: scale(0);
+  transform-origin: center center;
+  transition: transform 0.4s ease;
+  transition-delay: 0.15s;
+  z-index: 0;
+}
+
+.burger__Menu svg {
+  position: relative;
+  z-index: 1;
+}
+
+.burger__Menu:active::after,
+.burger__Menu.active::after {
+  transform: scale(1);
+}
+
+.burger__Menu:hover {
+  transform: translateX(-15%) scale(1.05);
+}
+
+.burger__Menu:active {
+  transform: translateX(-15%) scale(0.95);
+}
+
+.burger__MenuDots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(4px, 1vw, 6px);
+  user-select: none;
+  pointer-events: none;
+  transition: transform 0.5s ease;
+}
+
+.burger__Menu:hover .burger__MenuDots {
+  transform: rotate(180deg);
+}
